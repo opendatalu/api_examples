@@ -4,7 +4,14 @@ import json
 import shutil
 
 parser = argparse.ArgumentParser()
-parser.add_argument('api_key', help="API key to use", type=str)
+parser.add_argument(
+    '-a',
+    '--api-key',
+    dest='api_key',
+    required=False,
+    help="API key to use",
+    type=str
+)
 parser.add_argument('dataset_id', type=str)
 args = parser.parse_args()
 
